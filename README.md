@@ -8,7 +8,7 @@
 	<li>No dependencies involved</li>
 </ul>
 
-<h3><a href="http://htmlpreview.github.io/?https://github.com/niksoft3ng/html-table-search-js/blob/master/demo.htm">demo</a></h3>
+<h3><a href="http://htmlpreview.github.io/?https://github.com/niksoft3ng/html-table-search-js/blob/master/demo.htm">Demo</a></h3>
 
 <h3>How to use?</h3>
 <ul>
@@ -35,6 +35,6 @@
 &lt;input type="text" id="txtSearch" /&gt;
 &lt;table id="tblTarget" /&gt;
 &lt;script type="text/javascript"&gt;
-	new TableSearch('txtSearch', 'tblTarget', { noResultsText: 'Nothing found! Try different keyword' }).initialize();
+	new TableSearch('txtSearch', 'tblTarget', { noResultsText: 'Nothing found!' }).initialize();
 &lt;/script&gt;
 </pre>
