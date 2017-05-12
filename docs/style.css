@@ -1,0 +1,91 @@
+body {
+    font-family: 'Segoe UI';
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+code {
+    background-color: lightcyan;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 8%;
+    background-color: #1C7F99;
+    color: #FFFFFF;
+    border-bottom: 3px gray solid;
+}
+
+.project_title,
+.github_link {
+    position: absolute;
+    top: 30%;
+    bottom: 30%;
+    font-weight: bold;
+    color: cyan;
+}
+
+.project_title {
+    left: 2%;
+}
+
+.github_link {
+    right: 2%;
+}
+
+.left_pane,
+.right_pane {
+    position: absolute;
+    top: 8.5%;
+    bottom: 0;
+}
+
+.left_pane {
+    left: 0;
+    width: 15%;
+    border-right: 2px gray solid;
+    background-color: lightcyan;
+}
+
+.right_pane {
+    right: 0;
+    width: 85%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.left_pane ul { 
+    list-style: none;
+    padding: 0;
+    margin-top: 10%;
+}
+
+.left_pane ul li a {
+    display: block;
+    color: #000000;
+    padding: 2% 13%;
+}
+
+.left_pane ul li a:hover {
+    background-color: lightgray;
+}
+
+.right_pane_content {
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    right: 15%;
+}
+
+.right_pane_content ul {
+    line-height: 30px;
+}
