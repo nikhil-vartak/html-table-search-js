@@ -1,17 +1,19 @@
 body {
     font-family: 'Segoe UI';
     font-size: 15px;
+    padding: 0;
+    margin: 0;
 }
 
-input[type='text'] {
+.search_box {
     font-family: 'Segoe UI';
     font-size: 15px;
-	width: 50%;
+	width: 70%;
 	padding: 0.5%;
 }
 
 .reset_hint {
-	margin-left: 2%;
+    margin-left: 2%;
 }
 
 .highlight1 { 
@@ -24,7 +26,7 @@ input[type='text'] {
 
 .table tr {
     text-align: left;
-    background-color: lightcyan;
+    /*background-color: lightcyan;*/
 }
 
 .table th {
