@@ -31,7 +31,7 @@ code {
     top: 30%;
     bottom: 30%;
     font-weight: bold;
-    color: cyan;
+    color: lightcyan;
 }
 
 .project_title {
@@ -40,6 +40,10 @@ code {
 
 .github_link {
     right: 2%;
+}
+
+.github_link:hover {
+    color: cyan;
 }
 
 .left_pane,
