@@ -38,7 +38,7 @@ TableSearch.prototype = {
 
 		this.toggleNoResult('remove');
 		
-		var keyword =  this.searchBox.value.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&"); // escape special chars
+		var keyword =  this.escapeSpecialChars(this.searchBox.value);
 		var textSearchRegex = new RegExp(keyword, "ig"); // case in-sensitive
 		var rowDisplay, rowObj, rowHtml, match; 
 		var firstRowIndex = (this.options.firstRowHeader == true) ? 1 : 0;
@@ -83,7 +83,7 @@ TableSearch.prototype = {
 		var row = document.createElement('tr');
 		row.innerHTML = rowHtml;
 
-		var textReplaceRegex = new RegExp(match, "g"); // case sensitive
+		var textReplaceRegex = new RegExp(this.escapeSpecialChars(match), "g"); // case sensitive
 		var highlightMarkup = '<mark ' + this.options.highlightCss + '>' + match + '</mark>';
 		var cell = null;
 		var htmlOut = '';
@@ -91,7 +91,7 @@ TableSearch.prototype = {
 		for (var i = 0; i < row.cells.length; i++) {
 			cell = row.cells.item(i);
 			// Highlighting works only for direct text content, not nested tags.
-			// e.g. searching "blog" in <td><a href="url">my blog</a></td> won't work. :(
+			// e.g. searching "blog" in <td><a href="url">my blog</a></td> won't work.
 			if (cell.children.length == 0) {
 				if (cell.textContent.indexOf(match) > -1) {
 					// Match found in this cell, highlight it
@@ -103,6 +103,10 @@ TableSearch.prototype = {
 		}
 
 		return htmlOut;
+	},
+
+	escapeSpecialChars: function(inStr) {
+		return inStr.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
 	},
 
 	toggleNoResult: function(mode) {
