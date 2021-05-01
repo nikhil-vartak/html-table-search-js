@@ -8,4 +8,4 @@
 	<li>Uses plain JavaScript, no dependencies</li>
 </ul>
 
-<a href="https://niksofteng.github.io/html-table-search-js" target="_blank">https://niksofteng.github.io/html-table-search-js</a>
+<a href="https://nikhil-vartak.github.io/html-table-search-js" target="_blank">https://nikhil-vartak.github.io/html-table-search-js</a>
